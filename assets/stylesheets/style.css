@@ -2,13 +2,18 @@
 .container {
   background: #e2e2e2;
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .button {
   background: #f16630;
   border: none;
   border-radius: 8px;
+  box-shadow: 0 0 3px #ddd;
   color: #fff;
   cursor: pointer;
   font-size: 22px;
@@ -23,6 +28,26 @@
   justify-content: center;
 }
 
+/* INICIO MEDIA QUERY GLOBAL */
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    margin: none;
+  }
+
+  .button {
+    cursor: none;
+    font-size: 24px;
+    height: 68px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+}
+
+/* FIM MEDIA QUERY GLOBAL */
+
 /* FIM GLOBAL */
 
 /* INICIO HEADER */
@@ -32,6 +57,21 @@
   overflow: hidden;
 }
 
+.header img {
+  height: 100%;
+  width: 100%;
+}
+
+/* INICIO MEDIA QUERY HEADER */
+
+@media screen and (max-width: 480px) {
+  .header {
+    height: auto;
+  }
+}
+
+/* FIM MEDIA QUERY HEADER */
+
 /* FIM HEADER */
 
 /* INICIO MAIN */
@@ -39,13 +79,34 @@
   padding: 0px 10px;
 }
 
+/* INICIO MEDIA QUERY MAIN */
+
+@media screen and (max-width: 480px) {
+  .main {
+    padding: 0px;
+  }
+}
+
+/* FIM MEDIA QUERY MAIN */
+
 /* FIM MAIN */
 
 /* INICIO CONTENT */
 
 .content {
   background-color: #fff;
+  padding: 10px;
 }
+
+/* INICIO MEDIA QUERY CONTENT */
+
+@media screen and (max-width: 480px) {
+  .content {
+    padding: 28px;
+  }
+}
+
+/* FIM MEDIA QUERY CONTENT */
 /* FIM CONTENT */
 
 /* INICIO INTRODUCTION */
@@ -67,6 +128,23 @@
   line-height: 21.6px;
   margin-bottom: 1rem;
 }
+
+/* INICIO MEDIA QUERY INTRODUCTION */
+@media screen and (max-width: 480px) {
+  .introduction {
+    width: 100%;
+    padding: 0;
+  }
+
+  .introduction h2 {
+    font-size: 28px;
+  }
+
+  .introduction p {
+    font-size: 20px;
+  }
+}
+/* FIM MEDIA QUERY INTRODUCTION */
 
 /* FIM INTRODUCTION */
 
@@ -99,6 +177,7 @@
   margin: auto;
   padding: 40px 0px;
   width: 490px;
+  overflow: hidden;
 }
 
 .products__description {
@@ -122,6 +201,43 @@
   text-decoration: underline;
   font-weight: 400;
 }
+
+/* INICIO MEDIA QUERY PRODUCTS */
+@media screen and (max-width: 480px) {
+  .products header {
+    height: 58px;
+    width: 100%;
+  }
+
+  .products h3 {
+    font-size: 20px;
+  }
+
+  .products__item {
+    border: none;
+    grid-template-columns: 1fr;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .products__description h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .products__description p {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .products__description a {
+    font-size: 18px;
+  }
+}
+/* FIM MEDIA QUERY PRODUCTS */
 
 /* FIM PRODUCTS */
 
@@ -166,12 +282,35 @@
   text-transform: uppercase;
 }
 
+/* INICIO MEDIA QUERY PROMOTIONAL */
+@media screen and (max-width: 480px) {
+  .promotional header {
+    height: 53px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .promotional__content h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .promotional__content p {
+    font-size: 20px;
+  }
+
+  .promotional__alert {
+    font-size: 18px;
+  }
+}
+/* FIM MEDIA QUERY PROMOTIONAL */
+
 /* FIM PROMOTIONAL */
 
 /* INICIO SALES */
 
 .sales {
-  padding: 1.5rem 0;
+  padding: 20px 0;
 }
 
 .sales header {
@@ -197,6 +336,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .sales__item img {
@@ -219,11 +359,37 @@
   margin-bottom: 3rem;
 }
 
+/* INICIO MEDIA QUERY SALES */
+@media screen and (max-width: 480px) {
+  .sales .sales__header h3 {
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+  .sales__list {
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sales__item p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .sales__item a {
+    font-size: 20px;
+  }
+}
+/* FIM MEDIA QUERY SALES */
+
 /* FIM SALES */
 
 /* INICIO RULES */
 .rules {
-  padding: 10px;
+  padding: 20px;
 }
 
 .rules p {
@@ -232,11 +398,19 @@
   line-height: 15.6px;
 }
 
+/* INICIO MEDIA QUERY RULES */
+@media screen and (max-width: 480px) {
+  .rules p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+/* FIM MEDIA QUERY RULES */
+
 /* FIM RULES */
 
 /* INICIO CONTACT */
-
-.contact__content {
+.contact {
   padding: 20px;
 }
 
@@ -252,60 +426,59 @@
   margin-bottom: 1rem;
 }
 
-.contact__content h3 {
-  font-size: 24px;
-  font-weight: 700;
-  width: 209px;
-}
-
-.contacts {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-
-.contact__itens {
+.contact__options {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: space-between;
+  padding: 30px 0;
 }
 
-.contact__item img {
-  float: left;
-  margin-right: 10px;
+.contact__chat {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.contact__name,
-.contact__number {
+.contact__chat__info {
+  padding: 2px;
+}
+
+.contact__chat__info p {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.contact__chat__info a {
+  color: #f16630;
   font-size: 14px;
   font-weight: 700;
 }
 
-.contact__number {
-  color: #f16630;
+.contact__tel___item {
+  margin-bottom: 20px;
 }
 
-.number,
-.local {
-  color: #000;
-}
+/* INICIO MEDIA QUERY CONTACT */
+@media screen and (max-width: 480px) {
+  .contact {
+    text-align: center;
+  }
+  .contact header {
+    height: 48px;
+  }
+  .contact__options {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
 
-.number {
-  font-weight: 700;
+  .contact__chat {
+    margin-bottom: 20px;
+  }
 }
-
-.local {
-  font-weight: 400;
-}
-
-.contact__number img {
-  float: left;
-  margin-right: 10px;
-}
-
-.contact__number {
-  margin-bottom: 12px;
-}
+/* FIM MEDIA QUERY CONTACT */
 
 /* FIM CONTACT */
 
@@ -328,5 +501,13 @@ footer {
   align-items: center;
   justify-content: space-evenly;
 }
+
+/* INICIO MEDIA QUERY FOOTER */
+@media screen and (max-width: 480px) {
+  footer {
+    text-align: center;
+  }
+}
+/* FIM MEDIA QUERY FOOTER */
 
 /* FIM FOOTER */
