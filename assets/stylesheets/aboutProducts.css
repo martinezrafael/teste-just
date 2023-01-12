@@ -21,13 +21,25 @@
 }
 
 .aboutProducts__item {
+  border-bottom: 1px dotted #414141;
   display: grid;
   grid-template-columns: 2fr 3fr;
-  padding: 40px 0;
+  margin-bottom: 20px;
+  padding: 32px;
 }
 
-.aboutProducts__item___description {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.aboutProducts__item___description h3,
+.aboutProducts__item___description p {
+  margin-bottom: 1rem;
+}
+
+.aboutProducts__btn {
+  background-color: #f16630;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 22px;
+  margin: auto;
+  height: 62px;
+  width: 327px;
 }
