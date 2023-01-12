@@ -19,3 +19,15 @@
   font-size: 22px;
   text-transform: uppercase;
 }
+
+.aboutProducts__item {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  padding: 40px 0;
+}
+
+.aboutProducts__item___description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
