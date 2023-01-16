@@ -1,9 +1,9 @@
-.aboutProducts {
+.b-aboutProducts {
   padding: 20px 12px 30px 12px;
   width: 495px;
 }
 
-.aboutProducts__header {
+.b-aboutProducts__header {
   background-color: #000;
   color: #fff;
   height: 48px;
@@ -15,12 +15,12 @@
   justify-content: center;
 }
 
-.aboutProducts__header h2 {
+.b-aboutProducts__header h2 {
   font-size: 22px;
   text-transform: uppercase;
 }
 
-.aboutProducts__item {
+.b-aboutProducts__item {
   border-bottom: 1px dotted #414141;
   display: grid;
   grid-template-columns: 2fr 3fr;
@@ -28,16 +28,17 @@
   padding: 32px;
 }
 
-.aboutProducts__item___description h3,
-.aboutProducts__item___description p {
+.b-aboutProducts__item___description h3,
+.b-aboutProducts__item___description p {
   margin-bottom: 1rem;
 }
 
-.aboutProducts__btn {
+.b-aboutProducts__btn {
   background-color: #f16630;
   border: none;
   border-radius: 8px;
   color: #fff;
+  cursor: pointer;
   font-size: 22px;
   margin: auto;
   height: 62px;
