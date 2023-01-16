@@ -1,15 +1,15 @@
-.introduction {
+.b-introduction {
   padding: 20px 12px 30px 12px;
   width: 495px;
 }
 
-.introduction__name {
+.b-introduction__name {
   color: #fd703a;
   font-size: 24px;
   margin-bottom: 7px;
 }
 
-.introduction__paragraph {
+.b-introduction__paragraph {
   color: #000;
   font-size: 18px;
   line-height: 21.6px;
